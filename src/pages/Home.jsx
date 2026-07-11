@@ -26,9 +26,9 @@ const Home = () => {
             </p>
             
             {/* Quick Benefits */}
-            <div className="flex gap-8 mb-10">
-              <div className="flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center">
+            <div className="flex flex-wrap gap-5 mb-10">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-[#F05A28]" />
                 </div>
                 <div>
@@ -36,8 +36,8 @@ const Home = () => {
                   <div className="text-xs text-gray-400">Haute performance</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center text-[#F05A28]">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center text-[#F05A28] flex-shrink-0">
                   <ShieldCheck size={18} />
                 </div>
                 <div>
@@ -45,8 +45,8 @@ const Home = () => {
                   <div className="text-xs text-gray-400">Qualité premium</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center text-[#F05A28]">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#F05A28]/30 flex items-center justify-center text-[#F05A28] flex-shrink-0">
                   <Wrench size={18} />
                 </div>
                 <div>
@@ -64,7 +64,7 @@ const Home = () => {
       </section>
 
       {/* Search Widget */}
-      <section className="container mx-auto px-4 -mt-10 relative z-30 mb-20">
+      <section className="container mx-auto px-4 md:-mt-10 relative z-30 mb-16 md:mb-20">
         <div className="bg-[#141414] border border-[#262626] rounded-xl p-6 shadow-2xl">
           <h2 className="text-xl font-bold text-white mb-2 uppercase tracking-wider">Trouvez la pièce compatible</h2>
           <p className="text-sm text-gray-400 mb-6">Sélectionnez votre véhicule pour voir les pièces compatibles</p>
@@ -107,7 +107,7 @@ const Home = () => {
       </section>
 
       {/* Categories */}
-      <section className="container mx-auto px-4 mb-20">
+      <section className="container mx-auto px-4 mb-16 md:mb-20">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-white uppercase tracking-wider">Nos Catégories</h2>
           <div className="flex gap-2">
@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       {/* Current Offers */}
-      <section className="container mx-auto px-4 mb-24">
+      <section className="container mx-auto px-4 mb-16 md:mb-24">
         <div className="flex flex-col md:flex-row items-end md:items-center justify-between mb-8 gap-4">
           <h2 className="text-2xl font-bold text-white uppercase tracking-wider">Nos Offres Du Moment</h2>
           <div className="flex items-center gap-4">
@@ -266,24 +266,25 @@ const Home = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-[#1A1A1A] to-[#0D0D0D] border border-[#262626] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="bg-gradient-to-r from-[#1A1A1A] to-[#0D0D0D] border border-[#262626] rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wider">Restez Informé</h3>
-            <p className="text-gray-400">Recevez nos offres et conseils entretien directement par email.</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wider">Restez Informé</h3>
+            <p className="text-gray-400 text-sm sm:text-base">Recevez nos offres et conseils entretien directement par email.</p>
           </div>
-          <div className="flex w-full md:w-auto max-w-md">
+          <div className="flex w-full md:w-auto md:min-w-[360px]">
             <input 
               type="email" 
               placeholder="Votre adresse e-mail" 
-              className="bg-[#0D0D0D] border border-[#262626] text-white rounded-l px-4 py-3 focus:outline-none focus:border-[#F05A28] w-full min-w-[250px]"
+              className="flex-1 min-w-0 bg-[#0D0D0D] border border-[#262626] text-white rounded-l px-4 py-3 focus:outline-none focus:border-[#F05A28] text-sm transition-colors"
             />
-            <button className="bg-[#F05A28] hover:bg-[#E04818] text-white font-bold px-6 py-3 rounded-r transition-colors whitespace-nowrap">
+            <button className="bg-[#F05A28] hover:bg-[#E04818] text-white font-bold px-4 sm:px-6 py-3 rounded-r transition-colors whitespace-nowrap text-sm flex-shrink-0">
               S'ABONNER
             </button>
           </div>
         </div>
       </section>
+
 
     </div>
   );

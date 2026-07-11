@@ -12,7 +12,7 @@ const ProductDetails = () => {
       <div className="container mx-auto px-4">
         
         {/* Breadcrumb & Vehicle Selector */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4 border-b border-[#262626] gap-4">
+        <div className="flex flex-col gap-4 mb-8 pb-4 border-b border-[#262626]">
           <div className="text-xs text-gray-400">
             <span className="hover:text-white cursor-pointer transition-colors">Accueil</span> &gt; 
             <span className="hover:text-white cursor-pointer transition-colors mx-1">Filtration</span> &gt; 
@@ -20,13 +20,18 @@ const ProductDetails = () => {
             <span className="text-[#F05A28] mx-1">Filtre à huile BOSCH F 026 407 203</span>
           </div>
           
-          <div className="flex items-center gap-4 bg-[#141414] border border-[#262626] px-4 py-2 rounded text-sm">
-            <span className="text-gray-400">VOTRE VÉHICULE :</span>
-            <span className="font-bold text-white">TOYOTA <span className="text-gray-500 mx-1">▼</span></span>
-            <span className="font-bold text-white">YARIS <span className="text-gray-500 mx-1">▼</span></span>
-            <span className="font-bold text-white">2021 <span className="text-gray-500 mx-1">▼</span></span>
-            <span className="font-bold text-white">1.5 VVT-i <span className="text-gray-500 mx-1">▼</span></span>
-            <button className="text-[#F05A28] font-bold ml-4 hover:underline">MODIFIER</button>
+          <div className="overflow-x-auto hide-scrollbar">
+            <div className="flex items-center gap-3 bg-[#141414] border border-[#262626] px-4 py-2.5 rounded text-sm whitespace-nowrap w-max min-w-full">
+              <span className="text-gray-400 text-xs uppercase tracking-wider font-bold">VÉHICULE :</span>
+              <span className="font-bold text-white">TOYOTA <span className="text-gray-500 mx-1">▼</span></span>
+              <span className="text-[#262626]">|</span>
+              <span className="font-bold text-white">YARIS <span className="text-gray-500 mx-1">▼</span></span>
+              <span className="text-[#262626]">|</span>
+              <span className="font-bold text-white">2021 <span className="text-gray-500 mx-1">▼</span></span>
+              <span className="text-[#262626]">|</span>
+              <span className="font-bold text-white">1.5 VVT-i <span className="text-gray-500 mx-1">▼</span></span>
+              <button className="text-[#F05A28] font-bold ml-2 hover:underline text-xs">MODIFIER</button>
+            </div>
           </div>
         </div>
 
@@ -152,7 +157,7 @@ const ProductDetails = () => {
         </div>
 
         {/* Tabs Section */}
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <div className="flex overflow-x-auto border-b border-[#262626] mb-8 hide-scrollbar">
             {['DESCRIPTION', 'CARACTÉRISTIQUES', 'COMPATIBILITÉ', 'AVIS CLIENTS (42)', 'QUESTIONS / RÉPONSES'].map((tab, i) => (
               <button 

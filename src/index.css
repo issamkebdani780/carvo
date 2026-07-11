@@ -12,10 +12,14 @@
 }
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
   body {
     background-color: var(--color-dark-900);
     color: var(--color-text-main);
     font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -27,4 +31,12 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  .animate-fadeIn {
+    animation: fadeIn 0.15s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

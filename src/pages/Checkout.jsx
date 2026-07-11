@@ -10,29 +10,29 @@ const Checkout = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Stepper */}
-        <div className="flex items-center justify-between border-b border-[#262626] pb-8 mb-10 overflow-x-auto hide-scrollbar">
+        <div className="flex items-center justify-between border-b border-[#262626] pb-6 mb-10 overflow-x-auto hide-scrollbar">
           {[
             { num: 1, title: 'INFORMATIONS', desc: 'Vos coordonnées', active: true },
             { num: 2, title: 'LIVRAISON', desc: 'Adresse & mode', active: false },
             { num: 3, title: 'PAIEMENT', desc: 'Mode de paiement', active: false },
-            { num: 4, title: 'CONFIRMATION', desc: 'Vérifiez votre commande', active: false },
-            { num: 5, title: 'TERMINÉE', desc: 'Merci !', active: false },
+            { num: 4, title: 'CONFIRMATION', desc: 'Vérifiez', active: false },
+            { num: 5, title: 'TERMINÉE', desc: 'Merci !', active: false },
           ].map((step, i) => (
             <React.Fragment key={i}>
-              <div className="flex items-center gap-3 shrink-0">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold border-2 ${
+              <div className="flex items-center gap-2 shrink-0">
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold border-2 text-sm ${
                   step.active 
                     ? 'border-[#F05A28] text-[#F05A28] bg-[#F05A28]/10' 
                     : 'border-[#262626] text-gray-500 bg-[#141414]'
                 }`}>
                   {step.num}
                 </div>
-                <div>
+                <div className="hidden sm:block">
                   <div className={`text-xs font-bold uppercase tracking-wider ${step.active ? 'text-white' : 'text-gray-500'}`}>{step.title}</div>
                   <div className="text-[10px] text-gray-500">{step.desc}</div>
                 </div>
               </div>
-              {i < 4 && <div className="h-[1px] bg-[#262626] flex-1 mx-4 min-w-[30px]"></div>}
+              {i < 4 && <div className="h-[1px] bg-[#262626] flex-1 mx-2 min-w-[16px]"></div>}
             </React.Fragment>
           ))}
         </div>
