@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #F05A28; /* The signature vibrant orange */
+  --color-primary-hover: #E04818;
+  --color-dark-900: #0D0D0D; /* Very dark background */
+  --color-dark-800: #141414; /* Slightly lighter for cards */
+  --color-dark-700: #1A1A1A; /* Borders, secondary elements */
+  --color-dark-600: #262626;
+  --color-text-main: #F2F2F2;
+  --color-text-muted: #A0A0A0;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-900);
+    color: var(--color-text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
